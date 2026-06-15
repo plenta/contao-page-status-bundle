@@ -15,22 +15,22 @@
   }],
   "support":{
     "issues": "https://github.com/plenta/contao-page-status-bundle/issues",
-    "source": "https://github.com/plenta/contao-page-status-bundle",
+    "source": "https://github.com/plenta/contao-page-status-bundle"
   },
   "require": {
     "php": "^8.1",
     "contao/conflicts": "@dev",
-    "contao/core-bundle": "^5.3",
+    "contao/core-bundle": "^5.3"
   },
   "require-dev": {
-    "contao/manager-bundle": "^5.3",
+    "contao/manager-bundle": "^5.3"
   },
   "extra": {
-    "contao-manager-plugin": "Plenta\\ContaoPageStatus\\ContaoManager\\Plugin"
+    "contao-manager-plugin": "Plenta\\ContaoPageStatusBundle\\ContaoManager\\Plugin"
   },
   "autoload": {
     "psr-4": {
-      "Plenta\\ContaoPageStatus\\": "src"
+      "Plenta\\ContaoPageStatusBundle\\": "src"
     }
   },
   "config": {

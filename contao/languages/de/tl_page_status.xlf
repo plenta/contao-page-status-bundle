@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file>
+        <body>
+            <trans-unit id="tl_page_status.title_legend">
+                <source>Seitenstatus</source>
+                <target>Seitenstatus</target>
+            </trans-unit>
+            <trans-unit id="tl_page_status.name.0">
+                <source>Status</source>
+                <target>Status</target>
+            </trans-unit>
+            <trans-unit id="tl_page_status.name.1">
+                <source>Geben Sie hier ihren Status ein.</source>
+                <target>Geben Sie hier ihren Status ein.</target>
+            </trans-unit>
+            <trans-unit id="tl_page_status.color.0">
+                <source>Farbe</source>
+                <target>Farbe</target>
+            </trans-unit>
+            <trans-unit id="tl_page_status.color.1">
+                <source>Wählen Sie ihre Anzeigefarbe.</source>
+                <target>Wählen Sie ihre Anzeigefarbe.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
