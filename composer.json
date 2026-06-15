@@ -1,0 +1,45 @@
+{
+  "name": "plenta/contao-page-status-bundle",
+  "type": "contao-bundle",
+  "description": "Contao page status bundle",
+  "license": "LGPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Plenta.io",
+      "homepage": "https://plenta.io"
+    }
+  ],
+  "funding": [{
+    "type": "github",
+    "url": "https://github.com/sponsors/plenta"
+  }],
+  "support":{
+    "issues": "https://github.com/plenta/contao-page-status-bundle/issues",
+    "source": "https://github.com/plenta/contao-page-status-bundle",
+  },
+  "require": {
+    "php": "^8.1",
+    "contao/conflicts": "@dev",
+    "contao/core-bundle": "^5.3",
+  },
+  "require-dev": {
+    "contao/manager-bundle": "^5.3",
+  },
+  "extra": {
+    "contao-manager-plugin": "Plenta\\ContaoPageStatus\\ContaoManager\\Plugin"
+  },
+  "autoload": {
+    "psr-4": {
+      "Plenta\\ContaoPageStatus\\": "src"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true,
+      "contao-components/installer": true,
+      "contao/manager-plugin": true,
+      "contao-community-alliance/composer-plugin": true,
+      "php-http/discovery": true
+    }
+  }
+}
