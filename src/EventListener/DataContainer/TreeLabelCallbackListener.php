@@ -41,7 +41,7 @@ class TreeLabelCallbackListener
 
         return $coreLabel.$this->getStatus((int) $row['page_status']).$this->getPublishingStatus($row);
     }
-    
+
     private function getArticleLabel(array $row, string $label): string
     {
         if (!isset($row['inColumn'])) {

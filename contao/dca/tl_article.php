@@ -15,6 +15,7 @@ use Contao\CoreBundle\DataContainer\PaletteManipulator;
 $GLOBALS['TL_DCA']['tl_article']['list']['global_operations']['pagestatus'] = [
     'href' => 'table=tl_page_status',
     'icon' => 'modules.svg',
+    'primary' => true,
 ];
 
 $GLOBALS['TL_DCA']['tl_article']['fields']['page_status'] = [
