@@ -1,6 +1,7 @@
-# Contao Page Status Bundle
+# Contao page and article status for editors
 
-... 
+Assign a colored status to pages and articles – visible directly in the
+page tree and article overview. Start and stop dates are also highlighted.
 
 ## Installation
 
