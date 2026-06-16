@@ -41,13 +41,16 @@ class TreeLabelCallbackListener
 
         return $coreLabel.$this->getStatus((int) $row['page_status']).$this->getPublishingStatus($row);
     }
-
+    
     private function getArticleLabel(array $row, string $label): string
     {
-        $tlArticle = System::importStatic('tl_article');
+        if (!isset($row['inColumn'])) {
+            return Backend::addPageIcon($row, $label);
+        }
+
         $labelWithStatus = $label.$this->getStatus((int) ($row['page_status'] ?? 0)).$this->getPublishingStatus($row);
 
-        return $tlArticle->addIcon($row, $labelWithStatus);
+        return System::importStatic('tl_article')->addIcon($row, $labelWithStatus);
     }
 
     private function getStatus(int $id): string
