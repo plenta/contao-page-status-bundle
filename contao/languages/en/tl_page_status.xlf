@@ -3,8 +3,8 @@
     <file>
         <body>
             <trans-unit id="tl_page_status.title_legend">
-                <source>Seitenstatus</source>
-                <target>Page Status</target>
+                <source>Status</source>
+                <target>Status</target>
             </trans-unit>
             <trans-unit id="tl_page_status.name.0">
                 <source>Status</source>

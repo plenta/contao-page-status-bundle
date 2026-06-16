@@ -12,12 +12,12 @@ declare(strict_types=1);
 
 use Contao\CoreBundle\DataContainer\PaletteManipulator;
 
-$GLOBALS['TL_DCA']['tl_page']['list']['global_operations']['pagestatus'] = [
+$GLOBALS['TL_DCA']['tl_article']['list']['global_operations']['pagestatus'] = [
     'href' => 'table=tl_page_status',
     'icon' => 'modules.svg',
 ];
 
-$GLOBALS['TL_DCA']['tl_page']['fields']['page_status'] = [
+$GLOBALS['TL_DCA']['tl_article']['fields']['page_status'] = [
     'inputType' => 'select',
     'filter' => true,
     'foreignKey' => 'tl_page_status.name',
@@ -26,17 +26,8 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['page_status'] = [
     'relation' =>['type' => 'belongsTo', 'load' => 'lazy'],
 ];
 
-$palettes = array_keys($GLOBALS['TL_DCA']['tl_page']['palettes']);
-
-$manipulator = PaletteManipulator::create()
+PaletteManipulator::create()
     ->addLegend('pagestatus_legend', 'publish_legend', PaletteManipulator::POSITION_BEFORE)
     ->addField('page_status', 'pagestatus_legend', PaletteManipulator::POSITION_APPEND)
+    ->applyToPalette('default', 'tl_article')
 ;
-
-foreach ($palettes as $palette) {
-    if ('__selector__' === $palette) {
-        continue;
-    }
-
-    $manipulator->applyToPalette($palette, 'tl_page');
-}

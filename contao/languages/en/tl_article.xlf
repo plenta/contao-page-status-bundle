@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file>
+        <body>
+            <trans-unit id="tl_article.pagestatus.0">
+                <source>Artikelstatus</source>
+                <target>Article Status</target>
+            </trans-unit>
+            <trans-unit id="tl_article.pagestatus.1">
+                <source>Artikelstatus hinzufügen und verwalten</source>
+                <target>Add and manage article statuses</target>
+            </trans-unit>
+            <trans-unit id="tl_article.page_status.0">
+                <source>Artikelstatus</source>
+                <target>Article Status</target>
+            </trans-unit>
+            <trans-unit id="tl_article.page_status.1">
+                <source>Bitte wählen Sie ihren Artikelstatus</source>
+                <target>Please select your article status</target>
+            </trans-unit>
+            <trans-unit id="tl_article.pagestatus_legend">
+                <source>Artikelstatus</source>
+                <target>Article Status</target>
+            </trans-unit>
+            <trans-unit id="tl_article.page.date_start">
+                <source>ab</source>
+                <target>from</target>
+            </trans-unit>
+            <trans-unit id="tl_article.page.date_stop">
+                <source>bis</source>
+                <target>until</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
