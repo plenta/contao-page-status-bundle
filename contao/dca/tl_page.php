@@ -21,7 +21,7 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['page_status'] = [
     'inputType' => 'select',
     'filter' => true,
     'foreignKey' => 'tl_page_status.name',
-    'eval' => ['maxlength' => 255, 'tl_class' => 'w50', 'includeBlankOption' => true],
+    'eval' => ['maxlength' => 255, 'tl_class' => 'w50', 'includeBlankOption' => true, 'chosen' => true],
     'sql' => "int(10) unsigned NOT NULL default 0",
     'relation' =>['type' => 'belongsTo', 'load' => 'lazy'],
 ];
