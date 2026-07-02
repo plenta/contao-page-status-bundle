@@ -12,8 +12,8 @@ declare(strict_types=1);
 
 namespace Plenta\ContaoPageStatusBundle\EventListener\DataContainer;
 
-use Contao\CoreBundle\DependencyInjection\Attribute\AsCallback;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Contao\CoreBundle\DependencyInjection\Attribute\AsCallback;
 
 #[AsCallback(table: 'tl_page_status', target: 'config.onload')]
 class PageStatusListener
@@ -28,6 +28,10 @@ class PageStatusListener
 
         if ('article' === $request?->query->get('do')) {
             $GLOBALS['TL_DCA']['tl_page_status']['config']['backlink'] = 'do=article';
+        }
+
+        if ('form' === $request?->query->get('do')) {
+            $GLOBALS['TL_DCA']['tl_page_status']['config']['backlink'] = 'do=form';
         }
     }
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file>
+        <body>
+            <trans-unit id="tl_form.pagestatus.0">
+                <source>Formularstatus</source>
+                <target>Formularstatus</target>
+            </trans-unit>
+            <trans-unit id="tl_form.pagestatus.1">
+                <source>Formularstatus hinzufügen und verwalten</source>
+                <target>Formularstatus hinzufügen und verwalten</target>
+            </trans-unit>
+            <trans-unit id="tl_form.page_status.0">
+                <source>Formularstatus</source>
+                <target>Formularstatus</target>
+            </trans-unit>
+            <trans-unit id="tl_form.page_status.1">
+                <source>Bitte wählen Sie ihren Formularstatus</source>
+                <target>Bitte wählen Sie ihren Formularstatus</target>
+            </trans-unit>
+            <trans-unit id="tl_form.pagestatus_legend">
+                <source>Formularstatus</source>
+                <target>Formularstatus</target>
+            </trans-unit>
+            <trans-unit id="tl_form.page.date_start">
+                <source>ab</source>
+                <target>ab</target>
+            </trans-unit>
+            <trans-unit id="tl_form.page.date_stop">
+                <source>bis</source>
+                <target>bis</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
