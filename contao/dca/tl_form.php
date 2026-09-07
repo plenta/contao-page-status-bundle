@@ -22,9 +22,13 @@ $GLOBALS['TL_DCA']['tl_form']['fields']['page_status'] = [
     'inputType' => 'select',
     'filter' => true,
     'foreignKey' => 'tl_page_status.name',
-    'eval' => ['tl_class' => 'w50', 'includeBlankOption' => true, 'chosen' => true],
-    'sql' => "int(10) unsigned NOT NULL default 0",
-    'relation' =>['type' => 'belongsTo', 'load' => 'lazy'],
+    'eval' => [
+        'includeBlankOption' => true,
+        'tl_class' => 'w50',
+        'multiple' => true,
+        'chosen' => true,
+    ],
+    'sql' => "text NULL",
 ];
 
 PaletteManipulator::create()
