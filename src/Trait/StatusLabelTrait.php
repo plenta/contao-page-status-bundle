@@ -50,7 +50,7 @@ trait StatusLabelTrait
 
         $statuses = $this->connection
             ->createQueryBuilder()
-            ->select('name', 'color')
+            ->select('name', 'color','icon','onlyIcon')
             ->from('tl_page_status')
             ->where('id IN (:ids)')
             ->setParameter('ids', $ids, ArrayParameterType::INTEGER)
@@ -63,13 +63,19 @@ trait StatusLabelTrait
 
         $labels = array_map(
             static function (array $status): string {
-                if (!empty($status['color'])) {
-                    return '<span class="label-info" style="color: #'.$status['color'].'">['.$status['name'].']</span>';
+                $name = StringUtil::specialchars($status['name']);
+                $onlyIcon = !empty($status['onlyIcon']);
+                $icon = !empty($status['icon']) ? '<i class="icon icon-'.$status['icon'].'" aria-hidden="true"></i>' : '';
+                $text = $onlyIcon ? '<span class="invisible">'.$name.'</span>' : $name;
+                $attr = $onlyIcon ? ' title="'.$name.'" data-contao-tooltips-target="tooltip"' : '';
+
+                if (preg_match('/^[0-9a-f]{3,6}$/i', (string) ($status['color'] ?? ''))) {
+                    $attr .= ' style="color: #'.$status['color'].'"';
                 }
 
-                return '<span class="label-info">['.$status['name'].']</span>';
+                return '<span class="label-info plentapagestatus"'.$attr.'>'.$text.$icon.'</span>';
             },
-            $statuses
+            $statuses,
         );
 
         return ' '.implode(' ', $labels);
@@ -109,4 +115,3 @@ trait StatusLabelTrait
         return array_values(array_filter(array_map('intval', $ids)));
     }
 }
-

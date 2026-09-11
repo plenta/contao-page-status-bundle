@@ -1,0 +1,47 @@
+.icon-picker {
+    border: none;
+    margin-top: 13px;
+    padding-left: 0;
+
+    legend {
+        font-size: .875rem;
+        font-weight: 500;
+    }
+}
+
+.icon-picker__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 3px;
+}
+
+.icon-picker__item {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--form-border);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+
+    &:has(:checked) {
+        border-color: var(--contao, #f47c00);
+        box-shadow: inset 0 0 0 1px var(--contao, #f47c00);
+    }
+
+    &:has(:focus-visible) {
+        outline: 2px solid var(--contao, #f47c00);
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
