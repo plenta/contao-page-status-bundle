@@ -22,6 +22,22 @@
                 <source>Wählen Sie ihre Anzeigefarbe.</source>
                 <target>Wählen Sie ihre Anzeigefarbe.</target>
             </trans-unit>
+            <trans-unit id="tl_page_status.onlyIcon.0">
+                <source>Nur das Icon anzeigen</source>
+                <target>Nur das Icon anzeigen</target>
+            </trans-unit>
+            <trans-unit id="tl_page_status.onlyIcon.1">
+                <source>Zeigt statt dem Text das Icon in der Liste an.</source>
+                <target>Zeigt statt dem Text das Icon in der Liste an.</target>
+            </trans-unit>
+            <trans-unit id="tl_page_status.icon.0">
+                <source>Icon</source>
+                <target>Icon</target>
+            </trans-unit>
+            <trans-unit id="tl_page_status.color.1">
+                <source>Wählen Sie ein Icon.</source>
+                <target>Wählen Sie ein Icon.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -1,0 +1,75 @@
+.tree_view .tl_left.with-offset {
+    .label-info.plentapagestatus {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 4px;
+        border: 1px solid var(--form-border);
+        border-radius: var(--border-radius);
+        padding-inline: 6px;
+
+        &:first-of-type {
+            margin-left: 6px;
+        }
+
+        .icon {
+            order: 1;
+            flex-shrink: 0;
+            width: 1em;
+            height: 1em;
+            background-color: currentColor;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: contain;
+            min-height: 18px;
+        }
+
+        .label-info:not(.label-info ~ .label-info) .icon {
+            margin-left: auto;
+        }
+
+        .icon-check {
+            mask-image: url('icons/check.svg');
+        }
+
+        .icon-circle-check {
+            mask-image: url('icons/circle-check.svg');
+        }
+
+        .icon-trash-off {
+            mask-image: url('icons/trash-off.svg');
+        }
+
+        .icon-loader-circle {
+            mask-image: url('icons/loader-circle.svg');
+        }
+
+        .icon-clock {
+            mask-image: url('icons/clock.svg');
+        }
+
+        .icon-loader {
+            mask-image: url('icons/loader.svg');
+        }
+
+        .icon-workflow {
+            mask-image: url('icons/workflow.svg');
+        }
+
+        .icon-tags {
+            mask-image: url('icons/tags.svg');
+        }
+
+        .icon-construction {
+            mask-image: url('icons/construction.svg');
+        }
+
+        .icon-bug {
+            mask-image: url('icons/bug.svg');
+        }
+
+        .icon-hourglass {
+            mask-image: url('icons/hourglass.svg');
+        }
+    }
+}

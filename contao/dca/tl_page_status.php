@@ -39,7 +39,7 @@ $GLOBALS['TL_DCA']['tl_page_status'] = [
     ],
 
     'palettes' => [
-        'default' => '{title_legend},name,color',
+        'default' => '{title_legend},name,color,icon,onlyIcon',
     ],
 
     'fields' => [
@@ -55,15 +55,27 @@ $GLOBALS['TL_DCA']['tl_page_status'] = [
             'sql' => "varchar(255) NOT NULL default ''"
         ],
         'color' => [
-            'inputType'=> 'text',
-            'eval'=> [
+            'inputType' => 'text',
+            'eval' => [
                 'maxlength' => 6,
                 'colorpicker' => true,
                 'isHexColor' => true,
                 'decodeEntities' => true,
                 'tl_class' => 'w50 wizard'
             ],
-            'sql'=> "varchar(6) COLLATE ascii_bin NOT NULL default ''"
+            'sql' => "varchar(6) COLLATE ascii_bin NOT NULL default ''"
         ],
+        'onlyIcon' => [
+            'inputType' => 'checkbox',
+            'eval' => ['tl_class' => 'w50'],
+            'sql' => ['type' => 'boolean', 'default' => false]
+        ],
+        'icon' => [
+            'inputType' => 'iconPicker',
+            'options' => ['clock', 'loader-circle', 'workflow', 'tags', 'construction', 'bug', 'hourglass', 'loader', 'trash-off', 'trash', 'circle-check', 'check'],
+            'reference' => &$GLOBALS['TL_LANG']['tl_page_status']['icons'],
+            'eval' => ['includeBlankOption' => true, 'tl_class' => 'clr'],
+            'sql' => "varchar(32) NOT NULL default ''",
+        ]
     ],
 ];
