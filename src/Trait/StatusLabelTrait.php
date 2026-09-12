@@ -109,4 +109,3 @@ trait StatusLabelTrait
         return array_values(array_filter(array_map('intval', $ids)));
     }
 }
-
