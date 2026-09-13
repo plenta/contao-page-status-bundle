@@ -11,16 +11,32 @@
                 <target>Status</target>
             </trans-unit>
             <trans-unit id="tl_page_status.name.1">
-                <source>Geben Sie hier ihren Status ein.</source>
-                <target>Enter your status here.</target>
+                <source>Geben Sie einen Namen für diesen Status ein, z.B. "In Bearbeitung".</source>
+                <target>Enter a name for this status, e.g. "In Progress".</target>
             </trans-unit>
             <trans-unit id="tl_page_status.color.0">
                 <source>Farbe</source>
                 <target>Color</target>
             </trans-unit>
             <trans-unit id="tl_page_status.color.1">
-                <source>Wählen Sie ihre Anzeigefarbe.</source>
-                <target>Select your display color.</target>
+                <source>Wählen Sie eine Farbe für diesen Status.</source>
+                <target>Choose a color for this status.</target>
+            </trans-unit>
+            <trans-unit id="tl_page_status.onlyIcon.0">
+                <source>Nur das Icon anzeigen</source>
+                <target>Show icon only</target>
+            </trans-unit>
+            <trans-unit id="tl_page_status.onlyIcon.1">
+                <source>Zeigt in der Liste nur das Icon statt des Textnamens.</source>
+                <target>Shows only the icon instead of the text name in the list.</target>
+            </trans-unit>
+            <trans-unit id="tl_page_status.icon.0">
+                <source>Icon</source>
+                <target>Icon</target>
+            </trans-unit>
+            <trans-unit id="tl_page_status.icon.1">
+                <source>Wählen Sie ein Icon, das den Status visuell kennzeichnet.</source>
+                <target>Choose an icon to visually identify this status.</target>
             </trans-unit>
         </body>
     </file>

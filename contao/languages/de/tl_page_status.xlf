@@ -11,32 +11,32 @@
                 <target>Status</target>
             </trans-unit>
             <trans-unit id="tl_page_status.name.1">
-                <source>Geben Sie hier ihren Status ein.</source>
-                <target>Geben Sie hier ihren Status ein.</target>
+                <source>Geben Sie einen Namen für diesen Status ein, z.B. "In Bearbeitung".</source>
+                <target>Geben Sie einen Namen für diesen Status ein, z.B. "In Bearbeitung".</target>
             </trans-unit>
             <trans-unit id="tl_page_status.color.0">
                 <source>Farbe</source>
                 <target>Farbe</target>
             </trans-unit>
             <trans-unit id="tl_page_status.color.1">
-                <source>Wählen Sie ihre Anzeigefarbe.</source>
-                <target>Wählen Sie ihre Anzeigefarbe.</target>
+                <source>Wählen Sie eine Farbe für diesen Status.</source>
+                <target>Wählen Sie eine Farbe für diesen Status.</target>
             </trans-unit>
             <trans-unit id="tl_page_status.onlyIcon.0">
                 <source>Nur das Icon anzeigen</source>
                 <target>Nur das Icon anzeigen</target>
             </trans-unit>
             <trans-unit id="tl_page_status.onlyIcon.1">
-                <source>Zeigt statt dem Text das Icon in der Liste an.</source>
-                <target>Zeigt statt dem Text das Icon in der Liste an.</target>
+                <source>Zeigt in der Liste nur das Icon statt des Textnamens.</source>
+                <target>Zeigt in der Liste nur das Icon statt des Textnamens.</target>
             </trans-unit>
             <trans-unit id="tl_page_status.icon.0">
                 <source>Icon</source>
                 <target>Icon</target>
             </trans-unit>
-            <trans-unit id="tl_page_status.color.1">
-                <source>Wählen Sie ein Icon.</source>
-                <target>Wählen Sie ein Icon.</target>
+            <trans-unit id="tl_page_status.icon.1">
+                <source>Wählen Sie ein Icon, das den Status visuell kennzeichnet.</source>
+                <target>Wählen Sie ein Icon, das den Status visuell kennzeichnet.</target>
             </trans-unit>
         </body>
     </file>
