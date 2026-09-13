@@ -3,15 +3,14 @@
 declare(strict_types=1);
 
 /**
- * Contao Page Status Bundle for Contao Open Source CMS
- *
+ * @package       Customer
  * @copyright     Copyright (c) 2026, Plenta.io
  * @author        Plenta.io <https://plenta.io>
- * @link          https://github.com/plenta/
+ * @license       commercial
  */
 
-use Contao\DC_Table;
 use Contao\DataContainer;
+use Contao\DC_Table;
 
 $GLOBALS['TL_DCA']['tl_page_status'] = [
     'config' => [
@@ -20,10 +19,10 @@ $GLOBALS['TL_DCA']['tl_page_status'] = [
         'sql' => [
             'keys' => [
                 'id' => 'primary',
-                'tstamp' => 'index'
+                'tstamp' => 'index',
             ],
         ],
-        'backlink' => 'do=page'
+        'backlink' => 'do=page',
     ],
 
     'list' => [
@@ -34,7 +33,7 @@ $GLOBALS['TL_DCA']['tl_page_status'] = [
         ],
         'label' => [
             'fields' => ['name'],
-            'format' => '%s'
+            'format' => '%s',
         ],
     ],
 
@@ -44,15 +43,15 @@ $GLOBALS['TL_DCA']['tl_page_status'] = [
 
     'fields' => [
         'id' => [
-            'sql' => "int(10) unsigned NOT NULL auto_increment",
+            'sql' => 'int(10) unsigned NOT NULL auto_increment',
         ],
         'tstamp' => [
-            'sql' => "int(10) unsigned NOT NULL default 0"
+            'sql' => 'int(10) unsigned NOT NULL default 0',
         ],
         'name' => [
             'inputType' => 'text',
             'eval' => ['mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'],
-            'sql' => "varchar(255) NOT NULL default ''"
+            'sql' => "varchar(255) NOT NULL default ''",
         ],
         'color' => [
             'inputType' => 'text',
@@ -61,21 +60,34 @@ $GLOBALS['TL_DCA']['tl_page_status'] = [
                 'colorpicker' => true,
                 'isHexColor' => true,
                 'decodeEntities' => true,
-                'tl_class' => 'w50 wizard'
+                'tl_class' => 'w50 wizard',
             ],
-            'sql' => "varchar(6) COLLATE ascii_bin NOT NULL default ''"
+            'sql' => "varchar(6) COLLATE ascii_bin NOT NULL default ''",
+        ],
+        'icon' => [
+            'inputType' => 'iconPicker',
+            'options' => [
+                'clock',
+                'loader-circle',
+                'workflow',
+                'tags',
+                'construction',
+                'bug',
+                'hourglass',
+                'loader',
+                'trash-off',
+                'trash',
+                'circle-check',
+                'check',
+            ],
+            'reference' => &$GLOBALS['TL_LANG']['tl_page_status']['icons'],
+            'eval' => ['includeBlankOption' => true, 'tl_class' => 'clr'],
+            'sql' => "varchar(32) NOT NULL default ''",
         ],
         'onlyIcon' => [
             'inputType' => 'checkbox',
             'eval' => ['tl_class' => 'w50'],
-            'sql' => ['type' => 'boolean', 'default' => false]
+            'sql' => ['type' => 'boolean', 'default' => false],
         ],
-        'icon' => [
-            'inputType' => 'iconPicker',
-            'options' => ['clock', 'loader-circle', 'workflow', 'tags', 'construction', 'bug', 'hourglass', 'loader', 'trash-off', 'trash', 'circle-check', 'check'],
-            'reference' => &$GLOBALS['TL_LANG']['tl_page_status']['icons'],
-            'eval' => ['includeBlankOption' => true, 'tl_class' => 'clr'],
-            'sql' => "varchar(32) NOT NULL default ''",
-        ]
     ],
 ];
