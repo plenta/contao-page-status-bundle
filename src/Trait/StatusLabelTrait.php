@@ -64,8 +64,8 @@ trait StatusLabelTrait
         $labels = array_map(
             static function (array $status): string {
                 $name = StringUtil::specialchars($status['name']);
-                $onlyIcon = !empty($status['onlyIcon']);
-                $icon = !empty($status['icon']) ? '<i class="icon icon-'.$status['icon'].'" aria-hidden="true"></i>' : '';
+                $icon = !empty($status['icon']) ? '<i class="icon icon-'.StringUtil::specialchars($status['icon']).'" aria-hidden="true"></i>' : '';
+                $onlyIcon = !empty($status['onlyIcon']) && '' !== $icon;
                 $text = $onlyIcon ? '<span class="invisible">'.$name.'</span>' : $name;
                 $attr = $onlyIcon ? ' title="'.$name.'" data-contao-tooltips-target="tooltip"' : '';
 
