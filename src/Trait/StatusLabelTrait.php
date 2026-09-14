@@ -61,24 +61,24 @@ trait StatusLabelTrait
             return '';
         }
 
-        $labels = array_map(
-            static function (array $status): string {
-                $name = StringUtil::specialchars($status['name']);
-                $icon = !empty($status['icon']) ? '<i class="icon icon-'.StringUtil::specialchars($status['icon']).'" aria-hidden="true"></i>' : '';
-                $onlyIcon = !empty($status['onlyIcon']) && '' !== $icon;
-                $text = $onlyIcon ? '<span class="invisible">'.$name.'</span>' : $name;
-                $attr = $onlyIcon ? ' title="'.$name.'" data-contao-tooltips-target="tooltip"' : '';
-
-                if (preg_match('/^[0-9a-f]{3,6}$/i', (string) ($status['color'] ?? ''))) {
-                    $attr .= ' style="color: #'.$status['color'].'"';
-                }
-
-                return '<span class="label-info plentapagestatus"'.$attr.'>'.$text.$icon.'</span>';
-            },
-            $statuses,
-        );
+        $labels = array_map([$this, 'renderStatusLabel'], $statuses);
 
         return ' '.implode(' ', $labels);
+    }
+
+    private function renderStatusLabel(array $status): string
+    {
+        $name = StringUtil::specialchars((string) ($status['name'] ?? ''));
+        $icon = !empty($status['icon']) ? '<i class="icon icon-'.StringUtil::specialchars($status['icon']).'" aria-hidden="true"></i>' : '';
+        $onlyIcon = !empty($status['onlyIcon']) && '' !== $icon;
+        $text = $onlyIcon ? '<span class="invisible">'.$name.'</span>' : $name;
+        $attr = $onlyIcon ? ' title="'.$name.'" data-contao-tooltips-target="tooltip"' : '';
+
+        if (preg_match('/^[0-9a-f]{3,6}$/i', (string) ($status['color'] ?? ''))) {
+            $attr .= ' style="color: #'.$status['color'].'"';
+        }
+
+        return '<span class="label-info plentapagestatus"'.$attr.'>'.$text.$icon.'</span>';
     }
 
     private function getPublishingStatus(array $row): string
